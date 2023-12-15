@@ -29,7 +29,8 @@ class StepDetectorService : Service(), SensorEventListener {
 
         if(countSensor != null){
             Toast.makeText(this, "Step Detecting Start", Toast.LENGTH_SHORT).show()
-            sensorManager.registerListener(this, countSensor, SensorManager.SENSOR_DELAY_NORMAL)
+            sensorManager.registerListener(this, countSensor, SensorManager.SENSOR_DELAY_UI)
+            System.out.println("kedua")
 
             GeneralHelper.updateNotification(this, this, PrefsHelper.getInt("FSteps"))
             callback.subscribeSteps(PrefsHelper.getInt("FSteps"))
@@ -56,6 +57,8 @@ class StepDetectorService : Service(), SensorEventListener {
             if (finalSteps > 0) {
                 PrefsHelper.putInt("FSteps", finalSteps)
                 GeneralHelper.updateNotification(this, this, finalSteps)
+                System.out.println("ketiga")
+
                 callback?.subscribeSteps(finalSteps)
             }
         }

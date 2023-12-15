@@ -50,10 +50,10 @@ class GeneralHelper {
 
         }
 
-        fun getCalories(steps: Int): String? {
-            val Cal = (steps * 0.045).toInt()
-            return "$Cal calories"
-        }
+//        fun getCalories(steps: Int): String? {
+//            val Cal = (steps * 0.045).toInt()
+//            return "$Cal calories"
+//        }
 
 
         fun getDistanceCovered(steps: Int): String? {

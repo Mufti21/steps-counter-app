@@ -7,4 +7,11 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="RoundedButtonStyle">
+        <item name="android:shape">rectangle</item>
+        <item name="android:background">#579FD3</item>
+        <item name="android:radius">10dp</item>
+    </style>
+
+
 </resources>
